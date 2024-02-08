@@ -1,10 +1,7 @@
-import { Navigate } from "react-router-dom"
-
-export default function RenderPlayerList({ players, navigate }) {
-    console.log(players)
+export default function RenderPlayerList({ players, navigate, filter }) {
     return(
         <div className="player-list">
-            {players.map((player) => {
+            {players.filter((player) => player.name.toUpperCase().includes(filter.toUpperCase())).map((player) => {
                 return (
                     <div onClick={() => {navigate(`/player/${player.id}`)}} key={player.id} className="player-container">
                         <h1>{player.name}</h1>

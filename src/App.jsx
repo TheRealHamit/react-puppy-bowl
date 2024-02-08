@@ -1,10 +1,8 @@
 import { Link, Route, Routes, useNavigate, useParams } from 'react-router-dom'
-import { useState, useEffect} from 'react'
 import Home from "./components/Home"
 import PlayerList from "./components/PlayerList"
 import CreatePlayer from './components/CreatePlayer'
 import Player from './components/Player'
-import './App.css'
 
 export default function App() {
 

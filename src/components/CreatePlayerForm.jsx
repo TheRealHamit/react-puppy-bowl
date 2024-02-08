@@ -10,32 +10,32 @@ export default function CreatePlayerForm({navigate}) {
         navigate("/player-list")
     }
     return (
-        <div>
-            <form method="POST" onSubmit={formSubmitted}>
+        <div className="create-player-form-container">
+            <form className="create-player-form" method="POST" onSubmit={formSubmitted}>
                 <label>
-                    Name:
-                    <input name="name" type="text" placeholder="Mococo"></input>
+                    Name: 
+                    <input className="create-player-form-item" name="name" type="text" placeholder="Mococo"></input>
                 </label>
                 <label>
                     Breed: 
-                    <input name="breed" type="text" placeholder="Guard Dog"></input>
+                    <input className="create-player-form-item" name="breed" type="text" placeholder="Guard Dog"></input>
                 </label>
                 <label>
                     Status: 
-                    <select name="status">
+                    <select className="create-player-form-item" name="status">
                         <option value="bench">Bench</option>
                         <option value="field">Field</option>
                     </select>
                 </label>
                 <label>
                     Image: 
-                    <input name="image-url" type="url" placeholder="https://static.wikia.nocookie.net/virtualyoutuber/images/3/3e/Mococo_Abyssgard_Portrait.png"></input>
+                    <input className="create-player-form-item" name="image-url" type="url" placeholder="https://static.wikia.nocookie.net/virtualyoutuber/images/3/3e/Mococo_Abyssgard_Portrait.png"></input>
                 </label>
                 <label>
                     Team ID: 
-                    <input name="team-id" type="number" min="1" placeholder="1"></input>
+                    <input className="create-player-form-item" name="team-id" type="number" min="1" placeholder="1"></input>
                 </label>
-                <input type="submit" value="Create Player"></input>
+                <input className="create-player-form-submit-button" type="submit" value="Create Player"></input>
             </form>
         </div>
     )

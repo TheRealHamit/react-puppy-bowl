@@ -1,3 +1,10 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,6 +24,7 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  margin: 1ex;
 }
 a:hover {
   color: #535bf2;
@@ -25,7 +33,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -67,6 +74,10 @@ button:focus-visible {
   }
 }
 
+input, select {
+  margin-left: 7px;
+}
+
 .player-list {
   display: flex;
   flex-wrap: wrap;
@@ -83,4 +94,29 @@ button:focus-visible {
 
 .player-image {
   height: 250px;
+}
+
+.create-player-form-container {
+  width: 300px;
+}
+
+.create-player-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.create-player-form > label {
+  margin: 3px;
+  display: flex;
+  flex-basis: 100%;
+}
+
+.create-player-form-item {
+  flex-grow: 1;
+}
+
+.create-player-form-submit-button {
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
 }

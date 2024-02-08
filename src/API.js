@@ -40,7 +40,11 @@ export async function CreatePlayer(playerObj) {
             body: JSON.stringify(playerObj),
         })
         const result = await response.json()
-        console.log(result)
+        if (result.success) {
+            alert(`Successfully added player: ${result.data.newPlayer.name}`)
+        } else {
+            alert(`Failed to add player.\n${result.error.message}`)
+        }
     } catch(error) {
         console.error(error)
     }
@@ -53,7 +57,11 @@ export async function DeletePlayer(playerId) {
             method: "DELETE"
         })
         const result = await response.json()
-        console.log(result)
+        if (result.success) {
+            alert(`Successfully removed player with id: ${playerId}`)
+        } else {
+            alert(`Failed to remove player.\n${result.error.message}`)
+        }
     } catch (error) {
         console.error(error)
     }

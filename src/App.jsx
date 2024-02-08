@@ -9,7 +9,6 @@ import './App.css'
 export default function App() {
 
   const navigate = useNavigate()
-  let playerId = useParams()
 
   return (
     <>

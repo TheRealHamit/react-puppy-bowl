@@ -72,8 +72,13 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-.player-container{
+.player-container {
   flex-basis: 33%;
+  transition: background-color 0.2s
+}
+
+.player-container:hover {
+  background-color: #393939;
 }
 
 .player-image {

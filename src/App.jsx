@@ -22,8 +22,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/player-list" element={<PlayerList navigate={navigate} />} />
-          <Route path="/create-player" element={<CreatePlayer />} />
-          <Route path="/player/:playerId" element={<Player />} />
+          <Route path="/create-player" element={<CreatePlayer navigate={navigate} />} />
+          <Route path="/player/:playerId" element={<Player navigate={navigate} />} />
         </Routes>
       </div>
     </div>

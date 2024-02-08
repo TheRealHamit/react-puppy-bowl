@@ -27,3 +27,34 @@ export async function GetPlayer(playerId, setter) {
         console.error(error)
     }
 }
+
+export async function CreatePlayer(playerObj) {
+
+    try{
+        const response = await fetch(API_URL + "/players",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(playerObj),
+        })
+        const result = await response.json()
+        console.log(result)
+    } catch(error) {
+        console.error(error)
+    }
+}
+
+export async function DeletePlayer(playerId) {
+    try{
+        const response = await fetch(API_URL + `/players/${playerId}`,
+        {
+            method: "DELETE"
+        })
+        const result = await response.json()
+        console.log(result)
+    } catch (error) {
+        console.error(error)
+    }
+}

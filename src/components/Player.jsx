@@ -4,7 +4,7 @@ import { GetPlayer } from "../API"
 import RenderPlayer from "./RenderPlayer"
 
 
-export default function Player() {
+export default function Player({ navigate }) {
     let {playerId} = useParams()
 
     const [playerData, setPlayerData] = useState(null)
@@ -14,7 +14,7 @@ export default function Player() {
     }, [])
     return (
         <div>
-            {playerData && <RenderPlayer playerData={playerData} />}
+            {playerData && <RenderPlayer navigate={navigate} playerData={playerData} />}
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import CreatePlayerForm from "./CreatePlayerForm";
 
-export default function CreatePlayer() {
+export default function CreatePlayer({navigate}) {
     return (
         <div>
-            <CreatePlayerForm />
+            <CreatePlayerForm navigate={navigate} />
         </div>
     )
 }
